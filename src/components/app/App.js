@@ -1,7 +1,7 @@
 import Navigation from '../nav/Nav';
 import '../app/App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Companys from '../Companys/Companys';
+import Companies from '../Companies/Companies';
 import Stocks from '../Stocks/Stocks';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <><Router>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Companys />} />
+        <Route path="/" element={<Companies />} />
         <Route path='stocks' element={<Stocks />} />
       </Routes>
     </Router>
