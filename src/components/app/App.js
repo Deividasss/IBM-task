@@ -2,7 +2,7 @@ import Navigation from '../nav/Nav';
 import '../app/App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Companies from '../Companies/Companies';
-import Stocks from '../Stocks/Stocks';
+import Footer from '../Footer/Footer';
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Companies />} />
-        <Route path='stocks' element={<Stocks />} />
       </Routes>
+      <Footer />
     </Router>
     </>
   );

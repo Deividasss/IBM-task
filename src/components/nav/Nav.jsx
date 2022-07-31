@@ -1,11 +1,10 @@
 import { Navbar, Nav, Container } from "react-bootstrap"
-import { useState } from "react"
-import { Form, Card, Button, Modal } from "react-bootstrap"
+import "../nav/Nav.scss"
 
 const Navigation = () => {
    
     return (
-        <Navbar style={{ backgroundColor: '#DEB887' }}>
+        <Navbar className="naviBar">
             <Container>
                 <Navbar.Brand>Companies</Navbar.Brand>
             </Container>
