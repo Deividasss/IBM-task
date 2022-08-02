@@ -1,19 +1,50 @@
-import { HighchartsChart, Chart, withHighcharts, XAxis, YAxis, Title, Subtitle, Legend, LineSeries, Caption, Annotation, Tooltip, SplineSeries, AreaSeries } from 'react-jsx-highcharts';
-import Highcharts, { numberFormat } from 'highcharts';
 import DatePicker from "react-datepicker"
 import { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import "../companiesCard/CompaniesCard.scss"
+import ReactApexChart from 'react-apexcharts';
+import { HighchartsChart, Chart, withHighcharts, XAxis, YAxis, Title, Subtitle, Legend, LineSeries, Caption, Annotation, Tooltip, SplineSeries, AreaSeries } from 'react-jsx-highcharts';
+import Highcharts, { numberFormat } from 'highcharts';
 
 const CompaniesCard = (props) => {
 
     const { companies, stock } = props
     const [modal, setModal] = useState(false)
     const [startDate, setStartDate] = useState(new Date());
+    console.log(stock)
 
-    const unixTime = stock.t;
-    const date = new Date(unixTime * 1000);
-    console.log(date.toLocaleDateString("en-US"));
+    /*const [apex, setApex] = useState({
+        series: [{
+            data: [{
+                x: new Date(),
+                y: [stock, , 6623.04, 6633.33]
+            },
+            {
+                x: new Date(1538780400000),
+                y: [6632.01, 6643.59, 6620, 6630.11]
+            },
+            ]
+        }],
+        options: {
+            chart: {
+                type: 'candlestick',
+                height: 350
+            },
+            title: {
+                text: 'CandleStick Chart',
+                align: 'left'
+            },
+            xaxis: {
+                type: 'datetime'
+            },
+            yaxis: {
+                tooltip: {
+                    enabled: true
+                }
+            }
+        },
+    });
+    */
 
     const openModal = () => {
         setModal(true)
@@ -33,6 +64,7 @@ const CompaniesCard = (props) => {
         );
     }
 
+
     return (
         <>
             <div class="col-md-3 productBox">
@@ -49,9 +81,9 @@ const CompaniesCard = (props) => {
                             <h3 className="product-title">{companies.name}</h3>
                         </a>
                         <hr></hr>
-                        <h3 className="price"><span className="product-price-dolers">{companies.country}</span>Country</h3>
-                        <h3 className="price"><span className="product-price-dolers">{companies.currency}</span>Currancy</h3>
-                        <h3 className="price"><span className="product-price-dolers">{companies.weburl}</span>WEB Url</h3>
+                        <h3 className="price"><span className="product-price-dolers">{companies.country}</span>Country:</h3>
+                        <h3 className="price"><span className="product-price-dolers">{companies.currency}</span>Currancy:</h3>
+                        <h3 className="price"><span className="product-price-dolers">{companies.weburl}</span>WEB Url:</h3>
                     </div>
                 </div>
             </div>
@@ -59,22 +91,25 @@ const CompaniesCard = (props) => {
                 centered>
                 <Button
                     type="button"
-                    className="cartCloseBtn btn-close"
+                    className="modalCloseBtn btn-close"
                     onClick={hideModal}
                     variant="none"
                 ></Button>
+
                 <div className='modalas'>
-                    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                    <div className="datepicker">
+                        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                    </div>
+                    {/*<ReactApexChart options={apex.options} series={apex.series} type="candlestick" height={350} />*/}
                     <HighchartsChart>
                         <Chart />
-                        <Title>Company stocks price</Title>
+                        <Title>Company stocks prices</Title>
                         <Legend />
                         <Tooltip valueSuffix=" k" />
-                        <XAxis categories={date}>
+                        <XAxis categories={stock.t}>
                         </XAxis>
                         <YAxis >
                             <SplineSeries name="High Price" data={stock.h} />
-                            <SplineSeries name="Low Price" data={stock.l} />
                         </YAxis>
                     </HighchartsChart>
                 </div>

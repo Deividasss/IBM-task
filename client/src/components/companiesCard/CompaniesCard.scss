@@ -1,5 +1,5 @@
 .productBox {
-    margin: 5% 0 10% 0;
+    margin: 3% 0 10% 0;
     width: 22%;
     text-align: center;
 }
@@ -12,7 +12,6 @@
     transition: all 0.7s ease 0s;
     border-radius: 10px;
     padding: 2%;
-    margin-top: 20%;
 }
 .stockLink {
     text-decoration: none;
@@ -55,9 +54,7 @@
     color: rgb(55, 55, 55);
     font-weight: 600;
 }
-.line {
-    color: black;
-}
+
 .product-grid .product-collection {
     font-size: 15px;
     font-weight: 600;
@@ -85,7 +82,7 @@
 }
 .product-grid .price {
     color: rgb(136, 136, 136);
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
 }
 .noCompanies {
@@ -97,4 +94,11 @@
     .product-grid {
         margin: 0 0 30px;
     }
+}
+.modalCloseBtn {
+    padding: 2% !important;
+    margin-left: 90%;
+}
+.datepicker {
+    padding: 2%;
 }

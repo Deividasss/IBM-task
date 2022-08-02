@@ -2,8 +2,10 @@ import { FaFacebookF, FaTwitter, FaGoogle, FaInstagram, FaLinkedin, FaGithub } f
 import "../Footer/Footer.scss"
 
 const Footer = () => {
+
     return (
         <>
+
             <footer class="appFooter">
                 <div class="container p-4 pb-0">
                     <section class="mb-4">
@@ -22,9 +24,10 @@ const Footer = () => {
                     </section>
                 </div>
                 <div class="text-center p-3">
-                    COPYRIGHT © NFT's Market, 2022
+                    COPYRIGHT © IBM, 2022
                 </div>
             </footer>
+
         </>
     )
 }
