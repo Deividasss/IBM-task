@@ -13,6 +13,8 @@ And then
 ## What you will find in this project
 
 ### - Main Page with the search for companies, where by entering the company's symbol in capital letters, you will get the company's information
+### - Error message for invalid input field value appears in red above the input field;
+### - Search input have validation to allow only letters including space, up to 35 characters;
 ### - By clicking on the company name on the card, you will find company stocks information
 ### - Purchase of company stocks (does not work completely)
 ### - Node.js local server
