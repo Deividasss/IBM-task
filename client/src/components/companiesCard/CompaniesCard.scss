@@ -102,3 +102,197 @@
 .datepicker {
     padding: 2%;
 }
+.stocksInfoMain {
+    display: flex;
+}
+.buyLogo {
+    width: 300px;
+    padding: 0 5%;
+}
+.buyName {
+    margin: 5% 2%;
+}
+
+.nftEditMain {
+    margin-top: 1%;
+}
+.nftEditImg {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 29px 6px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 2px 29px 6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 29px 6px rgba(0, 0, 0, 0.75);
+}
+.nftInfoMain {
+    display: flex;
+}
+.nftPriceImg {
+    width: 35px;
+    margin: 0 7px 3px 0;
+}
+.nftPriceLine {
+    color: rgba(104, 104, 104, 0.54);
+    font-size: 14px;
+    position: absolute;
+}
+.nftTitle {
+    font-size: 40px;
+}
+.nftCollection {
+    font-size: 20px;
+    color: rgba(180, 38, 38, 0.589);
+}
+.collectionImg {
+    width: 20px;
+    margin-left: 5px;
+}
+.nftInfo {
+    margin: 2% 0 0 8%;
+}
+.nftPrice {
+    margin-top: 40px;
+}
+.nftDolers {
+    color: rgba(104, 104, 104, 0.54);
+    font-size: 15px;
+    position: absolute;
+    margin: 10px 0 0 0;
+}
+.nftTimer {
+    margin: 2% 5%;
+}
+.timerEnd {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.652);
+}
+.myTimer {
+    float: right;
+}
+.nftBidBuyBtn {
+    margin: 18% 2%;
+}
+.nftBidBtn {
+    background-color: #a60d0d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 100px 12px 100px;
+    margin-right: 8px;
+    box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    transition: all 0.5s ease 0s;
+}
+.nftBidBtn:hover {
+    background-color: #d32121;
+}
+.nftDescriptionTitle {
+    margin-top: 3%;
+    font-size: 20px;
+}
+.description {
+    margin-top: -55%;
+    width: 35%;
+}
+.nftDescription {
+    font-size: 15px;
+}
+.details {
+    margin-top: 40px;
+    width: 35%;
+    padding-bottom: 5%;
+}
+.nftDetails {
+    font-size: 20px;
+}
+.nftCreator {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.652);
+}
+.nftCreatorEmail {
+    float: right;
+    color: rgba(0, 0, 0, 0.773);
+}
+.nftNetwork {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.652);
+}
+.nftNetworkInfo {
+    float: right;
+    color: rgba(0, 0, 0, 0.773);
+}
+.nftCollection2 {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.652);
+}
+.nftCollectionInfo {
+    float: right;
+    color: rgba(0, 0, 0, 0.773);
+}
+.bidHistory {
+    margin: 0% 42.6%;
+    width: 50%;
+}
+.bidOffers {
+    margin: 2% 42.6%;
+    width: 50%;
+}
+.noItems {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+    padding: 20px 0;
+}
+.noItemsImg {
+    width: 60px;
+    margin-left: 165px;
+}
+.noItemsHeading {
+    font-size: 16px;
+    text-align: center;
+}
+.bidHistoryHeading {
+    font-size: 22px;
+}
+.bidOffersHeading {
+    font-size: 22px;
+}
+.bidInfo {
+    margin-top: 3%;
+}
+.buyMain {
+    display: flex;
+    h3 {
+        font-size: 20px;
+        margin: 3% 0% 0 5%;
+    }
+}
+.buyStocksBtn {
+    background-color: #a60d0d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 100px 12px 100px;
+    margin: 2% 5%;
+    box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    transition: all 0.5s ease 0s;
+}
+.buyStocksBtn:hover {
+    background-color: #d32121;
+}
+.stockChart {
+    border: solid 1px rgba(0, 0, 0, 0.434);
+}
+.congradsText{
+    padding: 2%;
+    font-size: 22px;
+    text-align: center;
+    color: #e9e9e9;
+    background-color: #77abcb7d;
+    border-radius: 10px;
+}
+.congModal{
+    background-color: #628296 !important;
+}

@@ -17,6 +17,13 @@ const Companies = (props) => {
     }
 
     const submitHandler = (e) => {
+        /*
+        let cl = []
+        let hl = []
+        let ll = []
+        let ol = []
+        */
+       
         e.preventDefault()
         fetch(`https://finnhub.io/api/v1/stock/profile2?symbol=${search}&token=cbhselqad3i0blfg6ue0`)
             .then(response => response.json())
@@ -25,18 +32,21 @@ const Companies = (props) => {
         axios.get(`https://finnhub.io/api/v1/stock/candle?symbol=${search}&&resolution=1&from=1631022248&to=1631627048&token=cbhselqad3i0blfg6ue0`)
             .then(response => {
                 setStock(response.data)
-                /*
-                for (const key in response.data) {
-                    if (Array.isArray(response.data[key])) {
-                        for (let i = 0; i < response.data[key].length; i++) {
-                            console.log(response.data[key][i]);
-                        }
-                    }
-                    else {
-                        console.log(response.data[key])
-                    }
-                }
-                */
+
+                /* for (const key in response.data) {
+                     if (Array.isArray(response.data[key])) {
+                         for (let i = 0; i < response.data[key].length; i++) {
+                             cl.push(response.data.c[i])
+                             hl.push(response.data.h[i])
+                             ll.push(response.data.l[i])
+                             ol.push(response.data.h[i])
+                         }
+                     }
+                     else {
+                         console.log(response.data[key])
+                     }
+                 } */
+
             })
         setMessages({ message: 'Nothing found, please enter a valid company symbol', status: 'danger' })
     }
